@@ -1,0 +1,286 @@
+#navbar{
+    height: 50px;
+    width: 100%;
+}
+
+.logo{
+    position: relative;
+    top: -15px;
+    height: 40px;
+    width: 40px;
+}
+.navbar-container{
+    
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.preencher{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.preencher-title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 12px;
+
+    transform: translate(-50%,-50% );
+}
+
+
+#navbar-items li{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: start;
+    font-weight: bold;
+    width: 100%;
+    padding: 1%;
+
+
+}
+
+#navbar-items li:nth-child(2){
+    border-top: #141414;
+    border-top: #141414;
+
+
+}
+
+.botao{
+    font-size: 20px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    background: -webkit-linear-gradient(to right, #1e2d6d, #162152);
+    background: linear-gradient(to right, #1e2d6d, #162152); ;
+    border: none;
+    border-radius: 15px;
+    color: white;
+}
+.resultados{
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%,-50% )
+
+}
+.text-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50% );
+    font-size: 15px;
+
+}
+.bloco1{
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+}
+.bloco2{
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+    
+
+}
+
+.bloco3{
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco4{
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco5{
+    position: absolute;
+    top: 120%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco6{
+    position: absolute;
+    top: 120%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+.resultados-MP{
+
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    z-index: -1;
+
+
+}
+
+.bloco1-mp{
+    position: absolute;
+    top: 150%;
+    left: 30%;
+    width: 180px;
+    
+    transform: translateX(-50%);
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco2-mp{
+    position: absolute;
+    top: 150%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco3-mp{
+    position: absolute;
+    top: 170%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+.bloco4-mp{
+    position: absolute;
+    top: 170%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+.bloco5-mp{
+    position: absolute;
+    top: 170%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco5-mp{
+    position: absolute;
+    top: 190%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco6-mp{
+    position: absolute;
+    top: 190%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 180px;
+
+    z-index: -1;
+
+    
+
+}
+
+.bloco7-mp{
+    position: relative;
+    top: 165%;
+    left: 115%;
+    transform: translateX(-50%);
+    width: 380px;
+
+    z-index: -1;
+    
+
+}
+
+#footer{
+    position: absolute;
+    top: 290%;
+    left: 100%;
+    transform: translate(-50%,-50% );
+    text-align: center;
+
+}
+
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
