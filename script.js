@@ -22,7 +22,7 @@ function Calculadora(){
         let mdrdeb = debitos*txdebito/100;
         let mdrcred = creditos*txcredito/100;;
         let mdrtotal = mdrdeb+mdrcred;
-        let mdrano = (mdrtotal+aluguel)*12;
+        let mdrano = (mdrtotal+aluguel)*12/100;
 
 
         var debitos_ =  debitos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -81,10 +81,10 @@ function Calculadora(){
         var mdrtotal4 = mdrdebito4+mdrcredito4; 
 
 
-        var mdranual1 = (mdrtotal1+aluguel)*12;
-        var mdranual2 = (mdrtotal2+aluguel)*12;
-        var mdranual3 = (mdrtotal3+aluguel)*12;
-        var mdranual4 = (mdrtotal4+aluguel)*12;
+        var mdranual1 = (mdrtotal1+aluguel)*12/100;
+        var mdranual2 = (mdrtotal2+aluguel)*12/100;
+        var mdranual3 = (mdrtotal3+aluguel)*12/100;
+        var mdranual4 = (mdrtotal4+aluguel)*12/100;
 
 
         var mdrdeb1 = mdrdebito1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -194,8 +194,7 @@ function Calculadora(){
         
         
         } 
-        let arre = Math.trunc(mdrano)
-
+        let dada = mdranul4_/100
         console.log(arre
             
 
