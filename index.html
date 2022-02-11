@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador - Mercado Pago</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <script src="/script.js"></script>
+</head>
+
+
+
+<body class="body">
+    <nav id="navbar">
+        <div class="navbar-container">
+            <img class="logo" src="https://logospng.org/download/mercado-pago/logo-mercado-pago-icone-1024.png" alt="">
+            <h1 class="text-logo">Calculadora - Mercado Pago</h1>
+        
+            <p class="comentario" type="text" value="" id="comentario">
+        </div>
+    </nav>
+
+
+
+<header id="">
+
+    <div class="loading">
+        <img src="./img/loading.gif" alt="Carregando..." id="loading" >
+    </div>
+    
+    <div class="preencher-title">
+        <p>Preencha todos os campos para realizar o calculo</p>
+    </div>
+    <div class="preencher">   
+    <ul id="navbar-items">
+        <li>
+            <td class="inputs"><label for="faturamento">Faturamento:</label>
+            <input class="inputs2" type="number" id="faturamento" /></td> 
+            
+            <td class="inputs"><label for="SHARED2">Share Debito:</label>
+            <input class="inputs2" type="number" id="SHARED"/></td>
+        </li>  
+        <li>
+            <td class="inputs"><label for="SHAREC">Share Credito:</label>
+            <input class="inputs2" type="number" id="SHAREC"/></td>
+            
+            <td class="inputs"><label for="aluguel">Aluguel Maquininha:</label>
+            <input class="inputs2" type="number" id="aluguel"></td>
+        </li>       
+        <li>  
+            <td class="inputs"><label for="txdebito">Taxa Maquinha Debito:</label>
+            <input class="inputs2" type="porcent" id="txdebito"></td>
+                
+            <td class="inputs"><label for="txcredito">Taxa Maquinha Credito:</label>
+            <input class="inputs2" type="number" id="txcredito"></td>
+        </li>          
+        
+        </ul>
+    </div>
+    <div class="comentario">
+        <p type="text" value="" id="comentario">
+    </div>
+    </header>
+    
+
+    
+</body>
+
+
+
+<div id="calcular">
+    <table>
+        <tr>
+            <td> 
+            <input alt="index" class="botao" type="button" value="CALCULAR" onclick="Calculadora();" name=""> 
+            </td>
+        </tr> 
+    </table>
+    </div>
+    
+    <seletion class="blocos">
+    <div id="blocos-items">    
+        <h1 class="resultados">RESULTADO</h1>
+
+        <div class="bloco1">
+            <input type="text" class="valor_share" name="result" id="share_debito">
+            <img src="img/carteira.png" alt="" class="carteira">
+            <p class="titulo_share">SHARE DÉBITO</p>
+        </div>    
+ 
+        <div class="bloco2"> 
+            <input type="text" class="valor_share" name="result" id="share_credito">
+            <img class="carteira" src="IMG/carteira.png">
+            <p class="titulo_share">SHARE CRÉDITO</p>
+            </div>
+
+
+        <div class="bloco3">    
+        <input type="text" class="valor_share" name="result" id="mdr_debito">
+        <img src="img/money.png" alt="" class="carteira">
+        <p class="titulo_share">MDR DÉBITO</p>
+        </div>
+
+        <div class="bloco4">
+            <input type="text" class="valor_share" name="result" id="mdr_credito">
+            <img src="img/money.png" alt="" class="carteira">
+            <p class="titulo_share">MDR CRÉDITO</p>
+        </div>
+        <div class="bloco5">
+        <input type="text" class="valor_share" name="result" id="mdr_total">
+        <img src="img/money (1).png" alt="" class="carteira">
+        <p class="titulo_share">MDR TOTAL</p>
+        </div>
+        
+        <DIV class="bloco6">
+        <input type="text" class="valor_share" name="result" id="mdr_ano">
+        <img src="img/money (1).png" alt="" class="carteira">
+        <p class="titulo_share">MDR ANUAL</p>
+    </DIV>
+    </seletion>
+    
+    
+    
+    <seletion class="blocos-mp">
+        <div id="blocos-items">    
+            <h1 class="resultados-MP">RESULTADOS - MERCADO PAGO</h1>
+    
+            <div class="bloco1-mp">
+                <input type="text" class="valor_share" name="result" id="taxa-debito-mp">
+                <img src="img/carteira.png" alt="" class="carteira">
+                <p class="titulo_share">TAXA DÉBITO</p>
+            </div>    
+     
+            <div class="bloco2-mp"> 
+                <input type="text" class="valor_share" name="result" id="taxa-credito-mp">
+                <img class="carteira" src="IMG/carteira.png">
+                <p class="titulo_share">TAXA CRÉDITO</p>
+                </div>
+    
+    
+            <div class="bloco3-mp">    
+            <input type="text" class="valor_share" name="result" id="mdr_debito_mp">
+            <img src="img/money.png" alt="" class="carteira">
+            <p class="titulo_share">MDR DÉBITO</p>
+            </div>
+    
+            <div class="bloco4-mp">
+                <input type="text" class="valor_share" name="result" id="mdr_credito_mp">
+                <img src="img/money.png" alt="" class="carteira">
+                <p class="titulo_share">MDR CRÉDITO</p>
+            </div>
+            <div class="bloco5-mp">
+            <input type="text" class="valor_share" name="result" id="mdr_total_mp">
+            <img src="img/money (1).png" alt="" class="carteira">
+            <p class="titulo_share">MDR TOTAL</p>
+            </div>
+            
+            <DIV class="bloco6-mp">
+            <input type="text" class="valor_share" name="result" id="mdr_ano_mp">
+            <img src="img/money (1).png" alt="" class="carteira">
+            <p class="titulo_share">MDR ANUAL</p>
+
+
+            <DIV class="bloco7-mp">
+                <input type="text" class="valor_TOTAL" name="result" id="DIF">
+                <img src="img/money (1).png" alt="" class="TOTAL">
+                <p class="titulo_TOTAL">DIFERENÇA ANUAL - MDR</p>
+        </DIV>
+        </seletion>
+    
+    
+    
+    
+    <footer id="">
+        <p id="footer">SINCE 2022 - POWERD BY Lucas Rodrigues</p>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
