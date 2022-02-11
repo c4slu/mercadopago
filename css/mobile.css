@@ -16,11 +16,13 @@
 }
 
 .preencher{
-    position: absolute;
-    top: 12%;
+    position: abs;
+    top: 85px;
     left: 50%;
     transform: translateX(-50%);
 
+
+    
 }
 .preencher-title{
     position: absolute;
@@ -28,9 +30,8 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
 
-    transform: translate(-50%,-50% );
 }
 
 
@@ -56,7 +57,7 @@
 .botao{
     font-size: 20px;
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     font-weight: bold;
@@ -68,9 +69,10 @@
 }
 .resultados{
     position: absolute;
-    top: 76%;
+    top: 79%;
     left: 50%;
-    transform: translate(-50%,-50% )
+    transform: translate(-50%,-50% );
+    font-size: 12px;
 
 }
 .text-logo{
@@ -154,12 +156,13 @@
 .resultados-MP{
 
     position: absolute;
-    top: 140%;
+    top: 145%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
     text-align: center;
     z-index: -1;
+    font-size: 12px;
 
 
 }
@@ -294,3 +297,5 @@
 .valor_share{
     font-size: 15px;
 }
+
+
