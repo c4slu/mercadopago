@@ -1,12 +1,13 @@
 const gifLoad = document.querySelector('#loading');
 const contentContainer = document.querySelector('#preencher')
 
+
 setTimeout(() => {
     gifLoad.remove(); //Remove o gif
         //Exibe as divs
     contentContainer.style.display =  'preencher'; 
 
-}, 1000);
+}, 1000);  
 
 function Calculadora(){
         let faturamento = document.getElementById("faturamento").value;
@@ -23,6 +24,7 @@ function Calculadora(){
         let mdrcred = creditos*txcredito/100;;
         let mdrtotal = mdrdeb+mdrcred;
         let mdrano = (mdrtotal+aluguel)*12/100;
+        let mdrano2 = mdrano*100;
 
 
         var debitos_ =  debitos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -31,30 +33,7 @@ function Calculadora(){
         var mdrcred_ = mdrcred.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
         var mdrtotal_ = mdrtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
         var mdrano_ = mdrano.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-
-
-
-
-
-        if (document.getElementById("faturamento").value == "" ||
-        document.getElementById("SHARED").value == "" ||
-        document.getElementById("SHAREC").value == "" ||
-        document.getElementById("aluguel").value == "" ||
-        document.getElementById("txdebito").value == "" ||
-        document.getElementById("txcredito").value == ""
-            ) {
-                document.getElementById("comentario").value = "Impossivel concluir o calculo, verifique novamente os campos acima." 
-        } else {
-            comentario.value = "" 
-
-            share_debito.value = debitos_
-            share_credito.value = creditos_
-            mdr_debito.value = mdrdeb_
-            mdr_credito.value = mdrcred_
-            mdr_ano.value = mdrano_
-            mdr_total.value = mdrtotal_
-
-
+        var mdrano2_ = mdrano2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
         var taxa_debito1 = 1.82;
         var taxa_credito1 = 4.15;
@@ -81,11 +60,13 @@ function Calculadora(){
         var mdrtotal4 = mdrdebito4+mdrcredito4; 
 
 
-        var mdranual1 = (mdrtotal1+aluguel)*12/100;
-        var mdranual2 = (mdrtotal2+aluguel)*12/100;
-        var mdranual3 = (mdrtotal3+aluguel)*12/100;
+        var mdranual1 = (mdrtotal1+aluguel)*12;
+        var mdranual2 = (mdrtotal2+aluguel)*12;
+        var mdranual3 = (mdrtotal3+aluguel)*12;
         var mdranual4 = (mdrtotal4+aluguel)*12/100;
+        var mdranual42 = mdranual4*100
 
+        var string = mdrano.length
 
         var mdrdeb1 = mdrdebito1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var mdrdeb2 = mdrdebito2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -105,23 +86,62 @@ function Calculadora(){
         var mdranual2_ = mdranual2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var mdranual3_ = mdranual3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var mdranual4_ = mdranual4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        var mdranual42_ = mdranual42.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
         var dif1 = mdranual1-mdrano;
         var dif2 = mdranual2-mdrano;
         var dif3 = mdranual3-mdrano;
         var dif4 = mdranual4-mdrano;
+        var dif42 = mdranual42-mdrano2
 
         var dif1_ = dif1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var dif2_ = dif2.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var dif3_ = dif3.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         var dif4_ = dif4.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        var dif42_ = dif42.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-        
+        if (document.getElementById("faturamento").value == "" ||
+        document.getElementById("SHARED").value == "" ||
+        document.getElementById("SHAREC").value == "" ||
+        document.getElementById("aluguel").value == "" ||
+        document.getElementById("txdebito").value == "" ||
+        document.getElementById("txcredito").value == ""
+            ) {
+                document.getElementById("comentario").value = "Impossivel concluir o calculo, verifique novamente os campos acima." 
+        } else { 
+            if (mdrano.length = 7) {
 
 
+                document.getElementById("taxa-debito-mp").value = taxa_debito4;
+                document.getElementById("taxa-credito-mp").value = taxa_credito4;
 
+                document.getElementById("mdr_debito_mp").value = mdrdeb4
+                document.getElementById("mdr_credito_mp").value = mdrcred4      
 
+                document.getElementById("mdr_total_mp").value = mdrtotal4_ 
 
+                document.getElementById("mdr_ano_mp").value = mdranual42_ 
+
+                document.getElementById("DIF").value = dif42_
+            
+            share_debito.value = debitos_
+            share_credito.value = creditos_
+            mdr_debito.value = mdrdeb_
+            mdr_credito.value = mdrcred_
+            mdr_ano.value = mdrano2_
+            mdr_total.value = mdrtotal_
+
+            comentario.value = "" 
+        } else {
+
+            share_debito.value = debitos_
+            share_credito.value = creditos_
+            mdr_debito.value = mdrdeb_
+            mdr_credito.value = mdrcred_
+            mdr_ano.value = mdrano_
+            mdr_total.value = mdrtotal_
+
+    
 
         /*taxa*/
             if (document.getElementById("faturamento").value >= 0 &&
@@ -173,7 +193,9 @@ function Calculadora(){
                 document.getElementById("DIF").value = dif3_
 
 
-            } else { if (document.getElementById("faturamento").value > 30001) {
+            } else { if (document.getElementById("faturamento").value >= 30001 &&
+            document.getElementById("faturamento").value <= 49999) {
+
 
                 document.getElementById("taxa-debito-mp").value = taxa_debito4;
                 document.getElementById("taxa-credito-mp").value = taxa_credito4;
@@ -185,27 +207,30 @@ function Calculadora(){
 
                 document.getElementById("mdr_ano_mp").value = mdranual4_ 
 
-                document.getElementById("DIF").value = dif4_      
-            }
+                document.getElementById("DIF").value = dif4_
+
+                    
             } 
-
-            }
+                  
         
-        
-        
-        } 
-        let dada = mdranul4_/100
-        console.log(arre
             
-
-            )
-
         
+         
+        console.log(mdranual4.length
+
+        )
         
 
 
 
+        }
+    } 
 
 }
 }
+} 
+}
+
+
+
 
